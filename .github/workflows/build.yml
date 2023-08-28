@@ -30,12 +30,12 @@ jobs:
         cd repo
         mkdir .deps
         cd .deps
-        cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..\cmake.deps
+        cmake -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..\cmake.deps
         cmake --build .
         cd ..
         mkdir build
         cd build
-        cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=..\..\Neovim ..
+        cmake -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=..\..\Neovim ..
         cmake --build .
         ninja
         ninja install
