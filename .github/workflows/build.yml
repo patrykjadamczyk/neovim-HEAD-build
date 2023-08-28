@@ -3,7 +3,9 @@ on:
   workflow_dispatch:
   schedule:
     # Run nightly (* is a special character in YAML, so quote the string)
-    - cron: '0 0 * * *'
+    # - cron: '0 0 * * *'
+    # - cron: '0 0,6,12,18 * * *'
+    - cron: '0 * * * *'
 
 jobs:
   build:
